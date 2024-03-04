@@ -1,6 +1,6 @@
-# Grafana panel plugin template
+# Article panel plugin
 
-This template is a starting point for building a panel plugin for Grafana.
+This is a datasource driven version of the default News panel in Grafana core. It works really well in combination with [RSS Data Source](https://github.com/VolkovLabs/volkovlabs-rss-datasource/tree/main), where you previously had to use the Dynamic Text panel, which didn't necessarily look similar to the default News panel.
 
 ## What are Grafana panel plugins?
 

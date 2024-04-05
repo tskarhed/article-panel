@@ -8,11 +8,15 @@ import { Article } from './Article';
 interface Props extends PanelProps<SimpleOptions> {}
 
 export const ArticlePanel: React.FC<Props> = ({ options, data, width, height }) => {
-  const titles = data.series[0].fields.find((field) => field.name === options.titleField)?.values;
-  const hrefs = data.series[0].fields.find((field) => field.name === options.hrefField)?.values;
-  const imageUrls = data.series[0].fields.find((field) => field.name === options.imageUrlField)?.values;
-  const dates = data.series[0].fields.find((field) => field.name === options.dateField)?.values;
-  const descriptions = data.series[0].fields.find((field) => field.name === options.descriptionField)?.values;
+  if (!data.series[0]) {
+    throw new Error("Couldn't find a series. Please make sure that your query is correct.");
+  }
+
+  const titles = data.series[0]?.fields.find((field) => field.name === options.titleField)?.values;
+  const hrefs = data.series[0]?.fields.find((field) => field.name === options.hrefField)?.values;
+  const imageUrls = data.series[0]?.fields.find((field) => field.name === options.imageUrlField)?.values;
+  const dates = data.series[0]?.fields.find((field) => field.name === options.dateField)?.values;
+  const descriptions = data.series[0]?.fields.find((field) => field.name === options.descriptionField)?.values;
 
   return (
     <CustomScrollbar autoHeightMin="100%" autoHeightMax="100%">

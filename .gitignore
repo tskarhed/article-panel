@@ -8,6 +8,7 @@ yarn-error.log*
 
 # Build artifacts
 *.zip
+tskarhed-article-panel/
 
 node_modules/
 

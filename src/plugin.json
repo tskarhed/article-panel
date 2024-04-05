@@ -13,8 +13,22 @@
       "small": "img/news.svg",
       "large": "img/news.svg"
     },
-    "links": [],
-    "screenshots": [],
+    "links": [
+      {
+        "name": "GitHub",
+        "url": "https://github.com/tskarhed/article-panel"
+      }
+    ],
+    "screenshots": [
+      {
+        "name": "Panel",
+        "path": "screenshots/panel.png"
+      },
+      {
+        "name": "Editor",
+        "path": "screenshots/editor.png"
+      }
+    ],
     "version": "%VERSION%",
     "updated": "%TODAY%"
   },

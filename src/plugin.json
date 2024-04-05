@@ -7,7 +7,7 @@
     "keywords": ["panel"],
     "description": "Like the ordinary news panel but datasource driven",
     "author": {
-      "name": "Tobias skarhed"
+      "name": "Tobias Skarhed"
     },
     "logos": {
       "small": "img/news.svg",

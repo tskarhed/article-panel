@@ -66,6 +66,28 @@ Use panel plugins when you want to do things like visualize data returned by dat
    npm run lint:fix
    ```
 
+# Build and release
+
+(This will be automated in the future)
+
+Install dependencies and build plugin
+
+```
+npm ci && npm run build
+```
+
+Create zip archive
+
+```
+cp -r dist/ tskarhed-article-panel
+```
+
+```
+zip tskarhed-article-panel-1.0.2.zip tskarhed-article-panel -r
+```
+
+Go to [releases](https://github.com/tskarhed/article-panel/releases) and create a new release. Upload the zip file to the release. A `sha1` file will be automatically generated.
+
 # Distributing your plugin
 
 When distributing a Grafana plugin either within the community or privately the plugin must be signed so the Grafana application can verify its authenticity. This can be done with the `@grafana/sign-plugin` package.
